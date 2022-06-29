@@ -2,8 +2,8 @@
 
 @section('content')
 
-    <hr>
     @foreach ($comics as $comic)
+    <br>
     <hr>
 
     <table>
@@ -30,7 +30,7 @@
                     <p>{{ $comic->type }}</p>
                 </td>
                 <td>
-                    <a href="">SHOW</a>
+                    <a href="{{ route('comics.show', $comic) }}">SHOW</a>
                 </td>
             </tr>
         </tbody>

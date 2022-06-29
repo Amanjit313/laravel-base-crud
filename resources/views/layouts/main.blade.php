@@ -9,7 +9,13 @@
 </head>
 <body>
 
+    <nav>
+        <a href="/">Home</a>
+        <a href="/comics">Comics</a>
+    </nav>
+
     @yield('content')
+
 
 </body>
 </html>
