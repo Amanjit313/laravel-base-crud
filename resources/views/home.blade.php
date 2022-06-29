@@ -2,6 +2,6 @@
 
 @section('content')
 
-    <div>CIAO</div>
+    <div>PAGINA INIZIALE</div>
 
 @endsection
