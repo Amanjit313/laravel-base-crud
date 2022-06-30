@@ -21,7 +21,7 @@
                     <p>{{ $comic->id }}</p>
                 </th>
                 <td>
-                    <img src="{{ $comic->image }}" alt="{{ $comic->title }}">
+                    <img class="w-50 h-50" src="{{ $comic->image }}" alt="{{ $comic->title }}">
                 </td>
                 <td>
                     <p>{{ $comic->title }}</p>

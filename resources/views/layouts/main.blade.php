@@ -13,10 +13,10 @@
     <nav>
         <a href="/">Home</a>
         <a href="/comics">Comics</a>
+        <a href="{{ route('comics.create') }}">New Comics</a>
     </nav>
 
     @yield('content')
-
 
 </body>
 </html>

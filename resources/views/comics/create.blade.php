@@ -2,17 +2,15 @@
 
 @section('content')
 
-    <h2>Aperta pagina per le modifiche del comic: {{ $comic->title }}</h2>
+    <h2>Aperta pagina per creare un comic</h2>
 
-    <form action=" {{ route('comics.update', $comic) }} " method="POST">
+    <form action=" {{ route('comics.store') }} " method="POST">
         @csrf
-        @method('PUT')
 
         <div class="col-4">
             <label for="title" class="form-label">Titolo</label>
             <input type="text" id="title"
                 name="title"
-                value="{{ $comic->title }}"
                 class="form-control" placeholder="Titolo">
         </div>
 
@@ -20,7 +18,6 @@
             <label for="image" class="form-label">Image</label>
             <input type="text" id="image"
                 name="image"
-                value="{{ $comic->image }}"
                 class="form-control" placeholder="Image">
         </div>
 
@@ -28,7 +25,6 @@
             <label for="type" class="form-label">Type</label>
             <input type="text" id="type"
                 name="type"
-                value="{{ $comic->type }}"
                 class="form-control" placeholder="Type">
         </div>
 
