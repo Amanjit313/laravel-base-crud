@@ -6,6 +6,6 @@
     <img src="{{ $comic->image }}" alt="{{ $comic->title }}">
     <p>{{ $comic->type }}</p>
 
-    <a href="{{ route('comics.index') }}">BACK</a>
+    <a class="btn btn-primary" href="{{ route('comics.index') }}">BACK</a>
 
 @endsection

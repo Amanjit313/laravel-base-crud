@@ -6,20 +6,20 @@
     <br>
     <hr>
 
-    <table>
+    <table class="table">
         <thead>
             <tr>
-                <th>ID</th>
-                <th>IMMAGINE</th>
-                <th>TITOLO</th>
-                <th>TIPO</th>
+                <th class="col-1">ID</th>
+                <th class="col-3">IMMAGINE</th>
+                <th class="col-3">TITOLO</th>
+                <th class="col-3">TIPO</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>
+                <th>
                     <p>{{ $comic->id }}</p>
-                </td>
+                </th>
                 <td>
                     <img src="{{ $comic->image }}" alt="{{ $comic->title }}">
                 </td>
@@ -30,7 +30,8 @@
                     <p>{{ $comic->type }}</p>
                 </td>
                 <td>
-                    <a href="{{ route('comics.show', $comic) }}">SHOW</a>
+                    <a class="btn btn-success" href="{{ route('comics.show', $comic) }}">SHOW</a>
+                    <a class="btn btn-primary" href="{{ route('comics.edit', $comic) }}">EDIT</a>
                 </td>
             </tr>
         </tbody>
