@@ -129,10 +129,10 @@ class ComicController extends Controller
             'title.min' => 'Questo campo non deve essere inferiore ai :min caratteri',
             'image.required' => 'Questo campo è obbligatorio',
             'image.max' => 'Questo campo non può superare i :max caratteri',
-            'image.min' => 'Questo campo non può superare i :min caratteri',
+            'image.min' => 'Questo campo non deve essere inferiore ai :min caratteri',
             'type.required' => 'Questo campo è obbligatorio',
             'type.max' => 'Questo campo non può superare i :max caratteri',
-            'type.min' => 'Questo campo non può superare i :min caratteri'
+            'type.min' => 'Questo campo non deve essere inferiore ai :min caratteri'
         ];
     }
 }
