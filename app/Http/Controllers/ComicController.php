@@ -37,6 +37,11 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate( $this->rulesValidate(), $this->messagesValidate());
+
+
+
         $data = $request->all();
 
         $new_comic = new Comic();
@@ -83,6 +88,10 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+
+        $request->validate( $this->rulesValidate(), $this->messagesValidate());
+
+
         $data = $request->all();
 
         $data['slug'] = Str::slug($data['title'], '-');
@@ -103,5 +112,27 @@ class ComicController extends Controller
         $comic->delete();
 
         return redirect()->route('comics.index');
+    }
+
+    private function rulesValidate(){
+        return [
+            'title' => 'required|max:50|min:3',
+            'image' => 'required|max:255|min:10',
+            'type' => 'required|max:50|min:3'
+        ];
+    }
+
+    private function messagesValidate(){
+        return [
+            'title.required' => 'Questo campo è obbigatorio',
+            'title.max' => 'Questo campo non può superare i :max caratteri',
+            'title.min' => 'Questo campo non deve essere inferiore ai :min caratteri',
+            'image.required' => 'Questo campo è obbligatorio',
+            'image.max' => 'Questo campo non può superare i :max caratteri',
+            'image.min' => 'Questo campo non può superare i :min caratteri',
+            'type.required' => 'Questo campo è obbligatorio',
+            'type.max' => 'Questo campo non può superare i :max caratteri',
+            'type.min' => 'Questo campo non può superare i :min caratteri'
+        ];
     }
 }
